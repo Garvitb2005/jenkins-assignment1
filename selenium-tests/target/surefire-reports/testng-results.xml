@@ -1,76 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-25T11:39:51 IST" name="ClassPlus UI Suite" finished-at="2026-05-25T11:40:12 IST" duration-ms="21136">
+  <suite started-at="2026-05-25T12:01:12 IST" name="ClassPlus UI Suite" finished-at="2026-05-25T12:01:31 IST" duration-ms="18869">
     <groups>
     </groups>
-    <test started-at="2026-05-25T11:39:51 IST" name="RegisterAndLoginTests" finished-at="2026-05-25T11:40:12 IST" duration-ms="21136">
+    <test started-at="2026-05-25T12:01:12 IST" name="RegisterAndLoginTests" finished-at="2026-05-25T12:01:31 IST" duration-ms="18869">
       <class name="com.classplus.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T11:40:05 IST" name="setUp" finished-at="2026-05-25T11:40:06 IST" duration-ms="782" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T12:01:24 IST" name="setUp" finished-at="2026-05-25T12:01:25 IST" duration-ms="981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginFormAcceptsInput()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T11:40:06 IST" name="loginFormAcceptsInput" description="Verify login form fields accept input" finished-at="2026-05-25T11:40:09 IST" duration-ms="2894" status="PASS">
+        <test-method signature="loginFormAcceptsInput()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T12:01:25 IST" name="loginFormAcceptsInput" description="Verify login form fields accept input" finished-at="2026-05-25T12:01:28 IST" duration-ms="2471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginFormAcceptsInput -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T11:40:09 IST" name="tearDown" finished-at="2026-05-25T11:40:12 IST" duration-ms="3304" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T12:01:28 IST" name="tearDown" finished-at="2026-05-25T12:01:31 IST" duration-ms="3281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.classplus.tests.LoginTest -->
       <class name="com.classplus.tests.RegisterTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T11:39:51 IST" name="setUp" finished-at="2026-05-25T11:39:54 IST" duration-ms="2221" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T12:01:12 IST" name="setUp" finished-at="2026-05-25T12:01:14 IST" duration-ms="1812" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerFlowCreatesUserAndNavigatesHome()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T11:39:54 IST" name="registerFlowCreatesUserAndNavigatesHome" description="Full registration flow: fill form, submit and verify navigation to home" finished-at="2026-05-25T11:40:02 IST" duration-ms="8635" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Registration failed in UI: Error: Failed to fetch]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Registration failed in UI: Error: Failed to fetch
-at org.testng.Assert.fail(Assert.java:111)
-at com.classplus.tests.RegisterTest.registerFlowCreatesUserAndNavigatesHome(RegisterTest.java:45)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="registerFlowCreatesUserAndNavigatesHome()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T12:01:14 IST" name="registerFlowCreatesUserAndNavigatesHome" description="Full registration flow: fill form, submit and verify navigation to home" finished-at="2026-05-25T12:01:21 IST" duration-ms="7011" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerFlowCreatesUserAndNavigatesHome -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T11:40:02 IST" name="tearDown" finished-at="2026-05-25T11:40:05 IST" duration-ms="3284" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T12:01:21 IST" name="tearDown" finished-at="2026-05-25T12:01:24 IST" duration-ms="3297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

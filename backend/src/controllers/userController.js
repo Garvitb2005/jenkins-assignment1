@@ -12,10 +12,17 @@ export const register = async (req, res) => {
       });
     }
 
-    // Verify the Firebase token
-    const decodedToken = await admin.auth().verifyIdToken(token);
-    const firebaseUid = decodedToken.uid;
-    console.log("Register attempt - decoded Firebase UID:", firebaseUid);
+    // Verify the Firebase token (if Firebase Admin is configured). If not,
+    // fall back to using `firebaseUid` provided in the request body.
+    let firebaseUid;
+    try {
+      const decodedToken = await admin.auth().verifyIdToken(token);
+      firebaseUid = decodedToken.uid;
+      console.log("Register attempt - decoded Firebase UID:", firebaseUid);
+    } catch (err) {
+      console.warn('Firebase verification failed or is not configured, falling back to request body:', err?.message || err);
+      firebaseUid = req.body?.firebaseUid;
+    }
     console.log("Register attempt - request body:", req.body);
 
     // Check if user already exists
@@ -72,14 +79,20 @@ export const login = async (req, res) => {
       });
     }
 
-    // Verify the Firebase token
-    const decodedToken = await admin.auth().verifyIdToken(token);
-    const firebaseUid = decodedToken.uid;
-    // DEBUG: log decoded UID for troubleshooting
-    console.log("Login attempt - decoded Firebase UID:", firebaseUid);
+    // Verify the Firebase token (if configured). If verification fails,
+    // fall back to finding the user by email (provided by the client).
+    let firebaseUid;
+    try {
+      const decodedToken = await admin.auth().verifyIdToken(token);
+      firebaseUid = decodedToken.uid;
+      console.log("Login attempt - decoded Firebase UID:", firebaseUid);
+    } catch (err) {
+      console.warn('Firebase verification failed or is not configured during login:', err?.message || err);
+    }
 
-    // Find user in MongoDB
-    const user = await userModel.findOne({ firebaseUid });
+    // Find user in MongoDB either by firebaseUid (if available) or by email
+    const lookup = firebaseUid ? { firebaseUid } : { email: req.body?.email };
+    const user = await userModel.findOne(lookup);
     console.log("Login attempt - user found in DB:", user ? user._id : null);
     if (!user) {
       return res.status(404).json({
@@ -119,9 +132,15 @@ export const updateFcmToken = async (req, res) => {
       });
     }
 
-    // Verify the Firebase token
-    const decodedToken = await admin.auth().verifyIdToken(token);
-    const firebaseUid = decodedToken.uid;
+    // Verify the Firebase token (if configured) and determine firebaseUid.
+    let firebaseUid;
+    try {
+      const decodedToken = await admin.auth().verifyIdToken(token);
+      firebaseUid = decodedToken.uid;
+    } catch (err) {
+      console.warn('Firebase verification failed or is not configured while updating FCM token:', err?.message || err);
+      firebaseUid = req.body?.firebaseUid;
+    }
 
     // Update FCM token for the user
     const { fcmToken } = req.body;

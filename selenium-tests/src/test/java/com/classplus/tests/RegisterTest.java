@@ -13,44 +13,57 @@ public class RegisterTest extends BaseTest {
 
     @Test(description = "Full registration flow: fill form, submit and verify navigation to home")
     public void registerFlowCreatesUserAndNavigatesHome() {
+
+        // Open register page
         driver.get(baseUrl + "/register");
 
+        // Find elements
         WebElement name = driver.findElement(By.cssSelector("input[placeholder='Name']"));
         WebElement email = driver.findElement(By.cssSelector("input[placeholder='Email']"));
         WebElement password = driver.findElement(By.cssSelector("input[placeholder='Password']"));
         WebElement submit = driver.findElement(By.cssSelector("button[type='submit']"));
 
+        // Create unique email every run
         String uniqueEmail = "selenium+" + System.currentTimeMillis() + "@example.com";
 
+        // Fill form
         name.sendKeys("Selenium Test User");
         email.sendKeys(uniqueEmail);
         password.sendKeys("TestPass123!");
 
-        // Submit the form
+        System.out.println("Submitting registration form...");
+
+        // Submit form
         submit.click();
 
-        // Wait for a known element on the home page (robust against URL formatting)
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        // Wait for either a success message, an error message, or the home page element
-        wait.until(d -> {
-            boolean successPresent = d.findElements(By.cssSelector(".success-message")).size() > 0;
-            boolean errorPresent = d.findElements(By.cssSelector(".error-message")).size() > 0;
-            boolean homePresent = d.findElements(By.cssSelector("h1")).size() > 0;
-            return successPresent || errorPresent || homePresent;
-        });
+        System.out.println("Waiting for navigation after registration...");
 
-        // If an error message appeared, fail with its text to aid debugging
+        // Wait for URL to change from /register
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+        wait.until(ExpectedConditions.not(
+                ExpectedConditions.urlContains("/register")
+        ));
+
+        // Get current URL
+        String currentUrl = driver.getCurrentUrl();
+
+        System.out.println("Navigated URL: " + currentUrl);
+
+        // Check if any UI error message is shown
         if (driver.findElements(By.cssSelector(".error-message")).size() > 0) {
-            String err = driver.findElement(By.cssSelector(".error-message")).getText();
-            Assert.fail("Registration failed in UI: " + err);
+
+            String errorText = driver.findElement(By.cssSelector(".error-message")).getText();
+
+            Assert.fail("Registration failed in UI: " + errorText);
         }
 
-        // Otherwise check navigation (be tolerant of trailing slash)
-        String currentUrl = driver.getCurrentUrl();
-        boolean navigated = currentUrl.equals(baseUrl)
-            || currentUrl.equals(baseUrl + "/")
-            || currentUrl.startsWith(baseUrl + "/");
+        // Final validation
+        Assert.assertFalse(
+                currentUrl.contains("/register"),
+                "Registration failed. User is still on register page."
+        );
 
-        Assert.assertTrue(navigated, "After registration the app should navigate to home. Current URL: " + currentUrl);
+        System.out.println("Registration test passed successfully.");
     }
 }

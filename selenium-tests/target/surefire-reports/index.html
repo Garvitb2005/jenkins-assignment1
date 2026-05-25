@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-ClassPlus_UI_Suite" class="navigator-link">
-              <span class="suite-name border-failed">ClassPlus UI Suite</span>
+              <span class="suite-name border-passed">ClassPlus UI Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-ClassPlus_UI_Suite" class="hide-methods failed suite-ClassPlus_UI_Suite"> (hide)</a> <!-- hide-methods failed suite-ClassPlus_UI_Suite -->
-                      <a href="#" panel-name="suite-ClassPlus_UI_Suite" class="show-methods failed suite-ClassPlus_UI_Suite"> (show)</a> <!-- show-methods failed suite-ClassPlus_UI_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-ClassPlus_UI_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ClassPlus_UI_Suite" title="com.classplus.tests.RegisterTest" class="method navigator-link" hash-for-method="registerFlowCreatesUserAndNavigatesHome">registerFlowCreatesUserAndNavigatesHome</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-ClassPlus_UI_Suite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-ClassPlus_UI_Suite" title="com.classplus.tests.LoginTest" class="method navigator-link" hash-for-method="loginFormAcceptsInput">loginFormAcceptsInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ClassPlus_UI_Suite" title="com.classplus.tests.RegisterTest" class="method navigator-link" hash-for-method="registerFlowCreatesUserAndNavigatesHome">registerFlowCreatesUserAndNavigatesHome</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ClassPlus_UI_Suite -->
@@ -132,9 +123,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ClassPlus_UI_Suite" class="panel ClassPlus_UI_Suite">
-          <div class="suite-ClassPlus_UI_Suite-class-failed">
+          <div class="suite-ClassPlus_UI_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.classplus.tests.RegisterTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -143,17 +134,12 @@
                   <a name="registerFlowCreatesUserAndNavigatesHome">
                   </a> <!-- registerFlowCreatesUserAndNavigatesHome -->
                   <span class="method-name">registerFlowCreatesUserAndNavigatesHome</span>
-                  <div class="stack-trace">java.lang.AssertionError: Registration failed in UI: Error: Failed to fetch
-	at com.classplus.tests.RegisterTest.registerFlowCreatesUserAndNavigatesHome(RegisterTest.java:45)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (Full registration flow: fill form, submit and verify navigation to home)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ClassPlus_UI_Suite-class-failed -->
+          </div> <!-- suite-ClassPlus_UI_Suite-class-passed -->
           <div class="suite-ClassPlus_UI_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -228,16 +214,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'registerFlowCreatesUserAndNavigatesHome')
 data.setCell(0, 2, 'com.classplus.tests.RegisterTest')
-data.setCell(0, 3, 8635);
+data.setCell(0, 3, 7011);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginFormAcceptsInput')
 data.setCell(1, 2, 'com.classplus.tests.LoginTest')
-data.setCell(1, 3, 2894);
+data.setCell(1, 3, 2471);
 window.suiteTableData['ClassPlus_UI_Suite']= { tableData: data, tableDiv: 'times-div-ClassPlus_UI_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-ClassPlus_UI_Suite">
               </div> <!-- times-div-ClassPlus_UI_Suite -->
             </div> <!-- times-div -->
@@ -269,29 +255,27 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">registerFlowCreatesUserAndNavigatesHome</span>
-                <span class="method-start">2226 ms</span>
+                <span class="method-start">1816 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10865 ms</span>
+                <span class="method-start">8830 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.classplus.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">14150 ms</span>
+                <span class="method-start">12128 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginFormAcceptsInput</span>
-                <span class="method-start">14932 ms</span>
+                <span class="method-start">13110 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">17826 ms</span>
+                <span class="method-start">15582 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
