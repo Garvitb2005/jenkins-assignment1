@@ -21,7 +21,7 @@ public class BaseTest {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        String headlessProp = System.getProperty("headless", "true");
+        String headlessProp = System.getProperty("headless", "false");
         boolean headless = Boolean.parseBoolean(headlessProp);
         if (headless) {
             options.addArguments("--headless=new");
