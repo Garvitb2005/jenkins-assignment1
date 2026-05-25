@@ -1,0 +1,142 @@
+/* General container for the assignment form */
+.create-assignment-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-assignment-container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  .create-assignment-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-assignment-container form div {
+    margin-bottom: 15px;
+  }
+  
+  .create-assignment-container label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .create-assignment-container input,
+  .create-assignment-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .create-assignment-container textarea {
+    min-height: 150px;
+  }
+  
+  .create-assignment-container input[type="date"] {
+    padding: 8px;
+  }
+  
+  .create-assignment-container button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-assignment-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .create-assignment-container .response-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    color: #333;
+    border: 1px solid #cce7ff;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .create-assignment-container .response-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  .create-assignment-container .response-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  /* For the list of assignments */
+  .assignment-list-container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .assignment-list-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .assignment-list-container .assignment-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .assignment-list-container .assignment-item h3 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .assignment-list-container .assignment-item p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .assignment-list-container .assignment-item .due-date {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
+  .assignment-list-container .assignment-item .view-pdf {
+    color: #007bff;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .assignment-list-container .assignment-item .view-pdf:hover {
+    text-decoration: underline;
+  }
+
+  

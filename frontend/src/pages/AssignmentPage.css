@@ -1,0 +1,76 @@
+.assignment-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .assignment-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .assignment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .assignment-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .assignment-item h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+  
+  .assignment-item p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .view-pdf {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .view-pdf:hover {
+    background-color: #0056b3;
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    color: #333;
+  }
+  .error {
+    color: red;
+  }
+  /* AssignmentPage.css */
+/* Ensure button is not hidden by CSS */
+/* Style for the new assignment button */
+/* Style for the new assignment button */
+.new-assignment-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .new-assignment-button:hover {
+    background-color: #45a049;
+  }
+  

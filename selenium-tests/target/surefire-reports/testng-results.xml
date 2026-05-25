@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-25T10:31:23 IST" name="ClassPlus UI Suite" finished-at="2026-05-25T10:31:51 IST" duration-ms="27342">
+    <groups>
+    </groups>
+    <test started-at="2026-05-25T10:31:23 IST" name="RegisterAndLoginTests" finished-at="2026-05-25T10:31:51 IST" duration-ms="27342">
+      <class name="com.classplus.tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T10:31:42 IST" name="setUp" finished-at="2026-05-25T10:31:42 IST" duration-ms="748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginFormAcceptsInput()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T10:31:42 IST" name="loginFormAcceptsInput" description="Verify login form fields accept input" finished-at="2026-05-25T10:31:47 IST" duration-ms="4853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFormAcceptsInput -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.classplus.tests.LoginTest@222114ba]" started-at="2026-05-25T10:31:47 IST" name="tearDown" finished-at="2026-05-25T10:31:51 IST" duration-ms="3278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.classplus.tests.LoginTest -->
+      <class name="com.classplus.tests.RegisterTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T10:31:23 IST" name="setUp" finished-at="2026-05-25T10:31:26 IST" duration-ms="3202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="registerFlowCreatesUserAndNavigatesHome()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T10:31:26 IST" name="registerFlowCreatesUserAndNavigatesHome" description="Full registration flow: fill form, submit and verify navigation to home" finished-at="2026-05-25T10:31:38 IST" duration-ms="11963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerFlowCreatesUserAndNavigatesHome -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.classplus.tests.RegisterTest@38c5cc4c]" started-at="2026-05-25T10:31:38 IST" name="tearDown" finished-at="2026-05-25T10:31:42 IST" duration-ms="3285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.classplus.tests.RegisterTest -->
+    </test> <!-- RegisterAndLoginTests -->
+  </suite> <!-- ClassPlus UI Suite -->
+</testng-results>
