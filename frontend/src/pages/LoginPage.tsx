@@ -31,7 +31,8 @@ const LoginPage = () => {
       );
 
       // Send token to backend (configurable via VITE_API_URL)
-      const apiBase = (import.meta as any).env?.VITE_API_URL || "http://localhost:8000";
+      const apiBase =
+        (import.meta as any).env?.VITE_API_URL || "http://localhost:8000";
       const response = await fetch(`${apiBase}/api/users/login`, {
         method: "POST",
         headers: {

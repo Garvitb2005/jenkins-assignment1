@@ -20,7 +20,10 @@ export const register = async (req, res) => {
       firebaseUid = decodedToken.uid;
       console.log("Register attempt - decoded Firebase UID:", firebaseUid);
     } catch (err) {
-      console.warn('Firebase verification failed or is not configured, falling back to request body:', err?.message || err);
+      console.warn(
+        "Firebase verification failed or is not configured, falling back to request body:",
+        err?.message || err,
+      );
       firebaseUid = req.body?.firebaseUid;
     }
     console.log("Register attempt - request body:", req.body);
@@ -87,7 +90,10 @@ export const login = async (req, res) => {
       firebaseUid = decodedToken.uid;
       console.log("Login attempt - decoded Firebase UID:", firebaseUid);
     } catch (err) {
-      console.warn('Firebase verification failed or is not configured during login:', err?.message || err);
+      console.warn(
+        "Firebase verification failed or is not configured during login:",
+        err?.message || err,
+      );
     }
 
     // Find user in MongoDB either by firebaseUid (if available) or by email
@@ -138,7 +144,10 @@ export const updateFcmToken = async (req, res) => {
       const decodedToken = await admin.auth().verifyIdToken(token);
       firebaseUid = decodedToken.uid;
     } catch (err) {
-      console.warn('Firebase verification failed or is not configured while updating FCM token:', err?.message || err);
+      console.warn(
+        "Firebase verification failed or is not configured while updating FCM token:",
+        err?.message || err,
+      );
       firebaseUid = req.body?.firebaseUid;
     }
 
