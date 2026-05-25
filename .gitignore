@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Do not commit Google service account keys
+backend/src/config/serviceAccountKey.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
