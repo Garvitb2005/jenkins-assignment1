@@ -30,8 +30,9 @@ const LoginPage = () => {
         idToken?.slice?.(0, 50),
       );
 
-      // Send token to backend
-      const response = await fetch("http://localhost:8000/api/users/login", {
+      // Send token to backend (configurable via VITE_API_URL)
+      const apiBase = (import.meta as any).env?.VITE_API_URL || "http://localhost:8000";
+      const response = await fetch(`${apiBase}/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
